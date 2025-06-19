@@ -1,24 +1,16 @@
 import { useState } from "react"
+import ModeButtons from "./ModeButtons"
 
-export default function Contact() {
-    const [editMode, setEditMode] = useState(true)
-
-    function handleModeChange(isEdit) {
-        setEditMode(isEdit)
-    }
-
+export default function Contact({ editMode }) {
     return (
         <section className="contact">
-            <div className="buttons">
-                <button className="edit-mode" onClick={() => handleModeChange(true)} disabled={editMode}>Edit</button>
-                <button className="preview-mode" onClick={() => handleModeChange(false)} disabled={!editMode}>Preview</button>
-            </div>
+            <h3>Contact</h3>
             {contactData.map(data => (
                 <ContactItem
                     key={data.id}
                     className={data.className}
                     src={data.src}
-                    alt={data.src}
+                    alt={data.alt}
                     initialText={data.initialText}
                     editMode={editMode} />
             ))}
