@@ -2,8 +2,6 @@
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -11,4 +9,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+@import './styles/reset.scss';
 @import './styles/App.scss';
+@import './styles/Cv.scss';
+@import './styles/Contact.scss';
