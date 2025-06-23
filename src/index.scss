@@ -1,3 +1,8 @@
+@use './styles/reset.scss';
+@use './styles/App.scss';
+@use './styles/Cv.scss';
+@use './styles/Contact.scss';
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -8,8 +13,3 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-@import './styles/reset.scss';
-@import './styles/App.scss';
-@import './styles/Cv.scss';
-@import './styles/Contact.scss';
