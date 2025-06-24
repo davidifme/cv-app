@@ -1,18 +1,28 @@
 import { useState } from "react";
 
 export default function Strengths({ editMode }) {
+    const [strengths, setStrengths] = useState(strengthsData);
+
+    function handleAddStrength() {
+        const newStrength = { text: '' };
+        setStrengths([...strengths, newStrength]);
+    }
+
     return (
         <section className="strengths">
             <h3>Strengths</h3>
             <ul className="strengths-list">
-                {strengthsData.map(data => (
+                {strengths.map((data, index) => (
                     <StrengthsItem
-                        key={data.text}
+                        key={data.text || `new-${index}`}
                         initialText={data.text}
                         editMode={editMode}
                     />
                 ))}
             </ul>
+            {editMode && (
+                <button onClick={handleAddStrength}>Add Strength</button>
+            )}
         </section>
     )
 }
