@@ -1,5 +1,5 @@
 import { useState } from "react"
-import ModeButtons from "./ModeButtons"
+import phoneIcon from '../assets/icons/phone.png'
 
 export default function Contact({ editMode }) {
     return (
@@ -39,7 +39,7 @@ const contactData = [
     {
         id: 'phone',
         className: 'phone',
-        src: 'src/assets/icons/phone.png',
+        src: phoneIcon,
         alt: 'Phone icon',
         initialText: '+48 123 456 789'
     },
