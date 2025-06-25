@@ -1,5 +1,8 @@
 import { useState } from "react"
 import phoneIcon from '../assets/icons/phone.png'
+import mailIcon from '../assets/icons/mail.png'
+import locationIcon from '../assets/icons/location.png'
+import cakeIcon from '../assets/icons/cake.png'
 
 export default function Contact({ editMode }) {
     return (
@@ -46,20 +49,20 @@ const contactData = [
     {
         id: 'email',
         className: 'email',
-        src: 'src/assets/icons/mail.png',
+        src: mailIcon,
         alt: 'Email icon',
         initialText: 'email.address@gmail.com'
     },
     {
         id: 'location',
-        className: 'location',
+        className: locationIcon,
         src: 'src/assets/icons/location.png',
         alt: 'Location icon',
         initialText: 'United States, Springfield'
     },
     {
         id: 'birth-date',
-        className: 'birth-date',
+        className: cakeIcon,
         src: 'src/assets/icons/cake.png',
         alt: 'Birth date icon',
         initialText: '17.06.2003'
