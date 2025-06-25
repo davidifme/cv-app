@@ -55,15 +55,15 @@ const contactData = [
     },
     {
         id: 'location',
-        className: locationIcon,
-        src: 'src/assets/icons/location.png',
+        className: 'location',
+        src: locationIcon,
         alt: 'Location icon',
         initialText: 'United States, Springfield'
     },
     {
         id: 'birth-date',
-        className: cakeIcon,
-        src: 'src/assets/icons/cake.png',
+        className: 'birth-date',
+        src: cakeIcon,
         alt: 'Birth date icon',
         initialText: '17.06.2003'
     }

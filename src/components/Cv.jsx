@@ -10,7 +10,7 @@ export default function Cv({ editMode }) {
     return (
         <>
             <aside>
-                <img className="profile-picture" src="src/assets/images/pfp.jpeg" alt="" />
+                <img className="profile-picture" src={pfpImage} alt="" />
                 <Contact editMode={editMode} />
                 <Strengths editMode={editMode} />
                 <Languages editMode={editMode} />
