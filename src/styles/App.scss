@@ -1,0 +1,13 @@
+header {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    p {
+        font-size: 2rem;
+    }
+}
