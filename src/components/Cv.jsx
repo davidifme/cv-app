@@ -7,14 +7,11 @@ import FullName from "./FullName";
 import Education from "./Education";
 import Work from "./Work";
 
-export default function Cv() {
-    const [editMode, setEditMode] = useState(true)
-
+export default function Cv({ editMode }) {
     return (
         <>
             <aside>
                 <img className="profile-picture" src="src/assets/images/pfp.jpeg" alt="" />
-                <ModeButtons editMode={editMode} onModeChange={setEditMode} />
                 <Contact editMode={editMode} />
                 <Strengths editMode={editMode} />
                 <Languages editMode={editMode} />

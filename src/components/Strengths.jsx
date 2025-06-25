@@ -4,7 +4,10 @@ export default function Strengths({ editMode }) {
     const [strengths, setStrengths] = useState(strengthsData);
 
     function handleAddStrength() {
-        const newStrength = { text: '' };
+        const newStrength = {
+            id: crypto.randomUUID(),
+            text: ''
+        };
         setStrengths([...strengths, newStrength]);
     }
 
@@ -12,11 +15,11 @@ export default function Strengths({ editMode }) {
         <section className="strengths">
             <h3>Strengths</h3>
             <ul className="strengths-list">
-                {strengths.map((data, index) => (
+                {strengths.map((data) => (
                     <StrengthsItem
-                        key={data.text || `new-${index}`}
-                        initialText={data.text}
+                        key={data.id}
                         editMode={editMode}
+                        data={data}
                     />
                 ))}
             </ul>
@@ -27,27 +30,27 @@ export default function Strengths({ editMode }) {
     )
 }
 
-function StrengthsItem({ editMode, initialText }) {
-    const [text, setText] = useState(initialText)
+function StrengthsItem({ editMode, data }) {
+    const [text, setText] = useState(data.text)
 
     function handleOnChange(e) {
         setText(e.target.value)
     }
 
     return (
-        <>
+        <li>
             {editMode
                 ? (<input type="text" value={text} onChange={handleOnChange} />)
-                : (<li>{text}</li>)
+                : text
             }
-        </>
+        </li>
     )
 }
 
 const strengthsData = [
-    { text: 'Strong communication skills' },
-    { text: 'Problem-solving ability' },
-    { text: 'Teamwork' },
-    { text: 'Adaptability' },
-    { text: 'Attention to detail' }
+    { id: 'strength-1', text: 'Strong communication skills' },
+    { id: 'strength-2', text: 'Problem-solving ability' },
+    { id: 'strength-3', text: 'Teamwork' },
+    { id: 'strength-4', text: 'Adaptability' },
+    { id: 'strength-5', text: 'Attention to detail' }
 ]

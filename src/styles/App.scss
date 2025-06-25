@@ -3,11 +3,20 @@ header {
     flex-direction: column;
     place-items: center;
 
-    h1 {
-        font-size: 3rem;
-    }
-
     p {
         font-size: 2rem;
+    }
+}
+
+main {
+    display: grid;
+    margin-top: 50px;
+    grid-template-areas:
+    'aside main';
+
+    border: 1px solid black;
+
+    input {
+        min-width: 250px;
     }
 }
