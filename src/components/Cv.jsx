@@ -5,6 +5,7 @@ import Languages from "./Languages";
 import ModeButtons from "./ModeButtons";
 import FullName from "./FullName";
 import Education from "./Education";
+import Work from "./Work";
 
 export default function Cv() {
     const [editMode, setEditMode] = useState(true)
@@ -21,6 +22,7 @@ export default function Cv() {
             <div className="content">
                 <FullName editMode={editMode} initialName={"Sarah Mitchell"}/>
                 <Education editMode={editMode} />
+                <Work editMode={editMode} />
             </div>
         </>
     );
