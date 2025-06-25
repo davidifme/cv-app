@@ -13,6 +13,10 @@ main {
     margin-top: 50px;
     grid-template-areas:
     'aside main';
+    grid-template-columns: minmax(400px, auto) 1fr;
+    max-width: 1440px;
+
+    margin-bottom: 100px;
 
     border: 1px solid black;
 

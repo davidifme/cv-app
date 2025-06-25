@@ -70,6 +70,7 @@ function EducationItem({ editMode, data }) {
             {editMode ? (
                 <>
                     <div>
+                        <p>School Name:</p>
                         <input
                             className="school-name"
                             type="text"

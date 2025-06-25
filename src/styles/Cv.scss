@@ -12,3 +12,10 @@ aside {
         box-shadow: 0 8px 24px 0 rgba(0, 0, 0, 0.18), 0 1.5px 4px 0 rgba(0, 150, 255, 0.10);
     }
 }
+
+.content {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+}
